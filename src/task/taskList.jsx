@@ -7,13 +7,13 @@ import { updateTaskDescription, updateTaskChecked, updateTaskStatus, sortFiltere
 import { useDispatch, useSelector } from 'react-redux';
 
 
-const TaskList = () => {
+const TaskList = ({checkIcon, setCheckIcon}) => {
     const dispatch = useDispatch();
     const state = useSelector((state) => state.app);
     const pagination = state.pagination;
     const [showEditDescription, SetShowEditDescription] = useState({})
     const [sort, setSort] = useState(false)
-    const [checkIcon, setCheckIcon] = useState(false)
+    
     const totalPages = Math.ceil(state.filteredList.length / pagination.pageSize)
     const startIndex = (pagination.currentPage - 1) * pagination.pageSize;
     const currentPageList = useMemo(() => { return state.filteredList.slice(startIndex, startIndex + pagination.pageSize) }, [state.filteredList, pagination.pageSize, startIndex]);

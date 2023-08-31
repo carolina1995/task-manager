@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import TaskList from './task/taskList'
 import AddTask from './task/addTask'
 import CompletedTasks from './task/completedTasks';
@@ -13,8 +13,9 @@ import { DummyTasks, setTaskListDB } from './helpers/database';
 const Home = () => {
     const state = useSelector((state) => state.app);
     const dispatch = useDispatch();
-
-
+    const [checkIcon, setCheckIcon] = useState(false)
+    const selectedTasksCount = state.taskList.filter((task) => task.selected === true).length
+    
     useEffect(() => {
         setTaskListDB(state.taskList)
     }, [state.taskList])
@@ -43,11 +44,17 @@ const Home = () => {
         // remove completed tasks from main list 
         let newList = state.taskList.filter(task => task.selected === false)
         handleSetTaskList(newList);
+        if(newList.length === 0){
+            setCheckIcon(false)
+        }
     }
 
     const RemoveSelectedTasks = () => {
         let newList = state.taskList.filter(task => task.selected === false) || state.taskList;
         handleSetTaskList(newList);
+        if(newList.length === 0){
+            setCheckIcon(false)
+        }
     }
 
     return (
@@ -59,10 +66,10 @@ const Home = () => {
 
                 <div className='task-lists-container'>
                     <div>
-                        <TaskList />
+                        <TaskList checkIcon={checkIcon}  setCheckIcon={setCheckIcon}/>
                         {(state.taskList.filter(task => task.selected === true).length) > 0 &&
                             <React.Fragment>
-                                <button onClick={() => { getCompletedTasks() }}>Mark As Completed ({state.taskList.filter((task) => task.selected === true).length})</button>
+                                <button onClick={() => { getCompletedTasks() }}>Mark As Completed ({selectedTasksCount})</button>
                                 <button onClick={() => { RemoveSelectedTasks() }}>Delete Selected Items</button>
                             </React.Fragment>
                         }

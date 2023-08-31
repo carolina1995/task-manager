@@ -3,8 +3,6 @@ import { Urgencies } from '../helpers/constants';
 import { useDispatch, useSelector } from 'react-redux';
 import { setOpenModal, resetfilters, filterListBySearch, filterListByUrgency, filterListByDates } from '../redux/reducers/appReducer';
 
-
-
 const TaskFilters = () => {
     const dateStartInputRef = useRef(null);
     const dateEndInputRef = useRef(null);
