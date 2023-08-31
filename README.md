@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+My Task Manager app, built using React Hooks and Redux, showcases my advanced frontend skills by offering a highly interactive, intuitive, and responsive user interface for task organization and management.
 
 ## Available Scripts
 
@@ -68,3 +68,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+![image](https://github.com/carolina1995/task-manager/assets/24224426/77429bc1-f14e-4e24-bdb4-66e10421536f)
+
