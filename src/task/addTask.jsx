@@ -67,12 +67,12 @@ const AddTask = ({ setOpenModal, setTaskList, taskList }) => {
                             </select>
                         </div>
                         <div className='new-item'>
-                            <label>Link To Person</label>
+                            <label>Assign To Person</label>
                             <div className='link-related'>
                                 {showRelatedList ?
                                     <select defaultValue={dataRef.current.related} onChange={(e) => { dataRef.current.related = e.target.value }}> {relatedList.map((related, i) => <option key={i} value={related}>{related}</option>)} </select>
                                     :
-                                    <input placeholder='Add Related Person Or Choose' onChange={(e) => { dataRef.current.related = e.target.value }} type="text" />
+                                    <input placeholder='Add Assigned Person Or Choose' onChange={(e) => { dataRef.current.related = e.target.value }} type="text" />
                                 }
                                 <AiOutlinePlusCircle size={25} onClick={() => { addRelatedList() }} style={{ padding: 10, cursor: 'pointer' }} />
                             </div>
@@ -81,7 +81,7 @@ const AddTask = ({ setOpenModal, setTaskList, taskList }) => {
                               <button type='submit' className='done-btn'>Add New Task</button>
                     </form>
                     <div>
-                        <img alt="add-task" width={350} height={350} style={{ borderRadius: 15 }} src='https://img.freepik.com/free-vector/add-tasks-concept-illustration_114360-4875.jpg?w=2000'></img>
+                        <img alt="add-task"  src='https://img.freepik.com/free-vector/add-tasks-concept-illustration_114360-4875.jpg?w=2000'></img>
                     </div>
                 </div>
                 

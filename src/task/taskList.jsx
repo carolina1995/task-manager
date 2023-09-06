@@ -48,14 +48,15 @@ const TaskList = ({checkIcon, setCheckIcon}) => {
     return (
         <div className="task-list" >
             <TaskFilters />
-            <table >
+            <div className='table-wrapper'>
+                 <table >
                 <thead>
                     <tr className='table-headers'>
                         <td>ID</td>
                         <td>Name </td>
-                        <td>Date To Finish</td>
+                        <td>Finish Date</td>
                         <td>Description</td>
-                        <td>Related To</td>
+                        <td>Assigned To</td>
                         <td>Urgency</td>
                         <td onClick={handleSort}><div >Status {sort ? <AiOutlineDown /> : <AiOutlineUp />}</div></td>
                         <td onClick={() => { handleSetCheckedAll() }}>{checkIcon ? <ImCheckboxChecked /> : <ImCheckboxUnchecked />}</td>
@@ -91,6 +92,8 @@ const TaskList = ({checkIcon, setCheckIcon}) => {
                     }
                 </tbody>
             </table>
+            </div>
+           
             <div>
                 {pagination.currentPage > 1 ?
                     <button onClick={() => {

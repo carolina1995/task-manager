@@ -60,10 +60,7 @@ const Home = () => {
     return (
         <div className='main-container'>
             <div className='task-container'>
-
                 {state.openModal && <AddTask taskList={state.taskList} setOpenModal={handleSetOpenModal} setTaskList={handleSetTaskList} handleSetOpenModal={handleSetOpenModal}></AddTask>}
-
-
                 <div className='task-lists-container'>
                     <div>
                         <TaskList checkIcon={checkIcon}  setCheckIcon={setCheckIcon}/>

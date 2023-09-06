@@ -10,7 +10,7 @@ const CompletedTasks = ({ completedList, setCompletedTasks }) => {
           <thead className='sticky-headers table-headers'>
             <tr>
                <td>Completed Tasks</td>
-                <td>Related To</td>
+                <td>Assigned To</td>
                 <td>Completed On</td>
             </tr>
            
@@ -27,7 +27,7 @@ const CompletedTasks = ({ completedList, setCompletedTasks }) => {
               </tr>
             )) :
                 <tr>
-                  <td colSpan="1" className='skeleton'>No Completed Tasks</td>
+                  <td colSpan="3" className='skeleton'>No Completed Tasks</td>
                 </tr>
             }
           </tbody>

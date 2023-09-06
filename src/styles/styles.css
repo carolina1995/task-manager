@@ -141,7 +141,12 @@ button:hover {
   align-items: flex-end;
   display: flex;
   flex-direction: column;
+}
 
+.add-task img {
+  width: 350px;
+  height: 350px;
+  border-radius: 15px
 }
 
 .new-task {
@@ -371,4 +376,121 @@ textarea {
   background: lightBlue;
   cursor: default;
   pointer-events: none;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+  }
+
+  button {
+    padding: 2px 5px;
+    text-transform: none;
+  }
+
+  .intro {
+    font-size: 14px;
+  }
+
+  .task-lists-container {
+    display: block;
+  }
+
+  .modal-bg {
+    position: absolute;
+    z-index: 0;
+    display: block;
+    transform: none;
+    top: auto;
+    left: auto;
+    background-color: var(--primaryColor);
+    height: auto;
+  }
+
+  .add-task {
+    border: none;
+  }
+
+  .add-task img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .new-task {
+    display: block;
+  }
+  .table-wrapper{
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  .task-list {
+    margin: 15px 0;
+  }
+
+  .task-list table {
+  overflow-x: scroll;
+  width: 100%;
+  }
+
+  .task-list .table-headers td {
+    font-size: 12px;
+    text-transform: none;
+  }
+
+  .task-list td {
+    width: 150px;
+    padding: 10px;
+    word-break: normal;
+    font-size: 12px;
+  }
+
+  .task-list td select {
+    background-color: lightpink;
+    width: 85px;
+    font-size: 12px;
+  }
+  .task-list td input[type=text] {
+    width: 100px;
+  }
+
+  .task-filters {
+    padding: 0;
+  }
+
+  .task-filters .task-buttons {
+    flex-direction: column;
+  }
+
+  .task-filters .task-filter-container {
+    flex-direction: column;
+    flex: auto;
+  }
+
+  .task-filters .task-filter-container .task-filter, .search {
+    justify-content: space-between;
+
+  }
+
+  .completed-tasks {
+    margin: 0;
+  }
+
+  .completed-tasks table {
+    width: auto;
+  }
+
+  .completed-tasks .completed-tasks-scroll {
+    overflow: auto;
+    max-width: 100%;
+  }
+
+  .completed-tasks .table-headers {
+    position: initial;
+  }
+
+  .completed-tasks .table-headers td {
+    font-size: 12px;
+    text-transform: none;
+    width: 200px;
+  }
 }
