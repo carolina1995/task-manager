@@ -257,6 +257,10 @@ textarea {
   align-items: center;
 }
 
+.task-list .table-wrapper{
+  display: contents;
+}
+
 .task-list td {
   border-radius: 3px;
   padding: 15px 10px;
@@ -275,6 +279,7 @@ textarea {
   white-space: nowrap;
   background: linear-gradient(to bottom, var(--secondaryColor) 60%, transparent);
 }
+
 
 
 .task-list table {
@@ -427,6 +432,7 @@ textarea {
     margin: 15px 0;
   }
 
+ 
   .task-list table {
   overflow-x: scroll;
   width: 100%;
