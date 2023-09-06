@@ -423,9 +423,10 @@ textarea {
   .new-task {
     display: block;
   }
-  .table-wrapper{
+  .task-list  .table-wrapper{
     overflow-x: auto;
     width: 100%;
+    display: block;
   }
 
   .task-list {
